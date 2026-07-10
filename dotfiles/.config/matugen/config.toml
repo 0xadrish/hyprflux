@@ -1,12 +1,17 @@
 [config]
 
 [config.wallpaper]
-command = 'awww img {{ image }}'
+command = 'awww img --transition-type center {{ image }}'
 
 [templates.waybar]
 input_path = '~/.config/matugen/templates/colors.css'
 output_path = '~/.config/waybar/colors.css'
 post_hook = 'pkill -SIGUSR2 waybar'
+
+[templates.kitty]
+input_path = '~/.config/matugen/templates/kitty-colors.conf'
+output_path = '~/.config/kitty/themes/Matugen.conf'
+post_hook = "kitty +kitten themes --reload-in=all Matugen"
 
 #[templates.gtk3]
 #input_path = '~/.config/matugen/templates/gtk-colors.css'
