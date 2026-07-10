@@ -1,0 +1,125 @@
+@import 'colors.css';
+
+* {
+    border: none;
+    border-radius: 0px;
+
+    font-family: "Adwaita Sans", "JetBrainsMono Nerd Font Propo", sans-serif;
+    font-weight: bold;
+
+    min-height: 0;
+    padding: 0;
+    margin: 0;
+}
+
+window#waybar {
+    background: transparent;
+}
+
+tooltip {
+    background: @surface;
+    border: 1px solid @bg3;
+    border-radius: 12px;
+}
+
+tooltip label {
+    color: @on_surface;
+    padding: 6px;
+}
+
+#workspaces {
+    background-color: @primary_container;
+    padding: 5px 3px;
+    margin: 0 0 0 12px;
+    border-radius: 18px;
+    border: 1px solid @outline_variant;
+    color: @on_primary_container;
+}
+
+#workspaces button {
+    padding: 0px 6px;
+    margin: 0 3px;
+    border-radius: 50px;
+    color: transparent;
+    background-color: @secondary_container;
+    transition: all 0.3s ease-in-out;
+}
+
+#workspaces button.active {
+    background-color: @primary;
+    color: @on_primary;
+    min-width: 45px;
+    transition: all 0.3s ease-in-out;
+    font-size: 12px;
+}
+
+#workspaces button:hover {
+    background-color: @tertiary_container;
+    color: @on_tertiary_container;
+    border-radius: 16px;
+    min-width: 45px;
+    background-size: 400% 400%;
+}
+
+#workspaces button.urgent {
+    background-color: @error;
+    color: @on_error;
+    border-radius: 16px;
+    min-width: 45px;
+    background-size: 400% 400%;
+    transition: all 0.3s ease-in-out;
+}
+
+#battery,
+#pulseaudio,
+#clock,
+#network,
+#custom-notification {
+    background-color: @primary_container;
+    color: @on_primary_container;
+    padding: 0 15px 0 15px;
+    margin: 0 15px 0 0;
+    border-radius: 45px;
+    border: 1px solid @bg1;
+}
+
+#clock {
+    margin: 0 0 0 20px;
+}
+
+#custom-notification {
+    margin: 0 20px 0 0;
+
+}
+
+/* #pulseaudio {
+    color: @yellow;
+}
+
+#network {
+    color: @purple;
+}
+
+#battery {
+    color: @green;
+} */
+
+/* Module Specific States */
+#battery.critical:not(.charging) {
+    background-color: @error;
+    color: @on_error;
+}
+
+#pulseaudio.muted {
+    color: @on_surface_variant;
+}
+
+#network.disconnected {
+    color: @error;
+}
+
+/* Hover Effects */
+#battery:hover, #pulseaudio:hover, #network:hover, #clock:hover, #custom-notification:hover {
+    background-color: @tertiary_container;
+    color: @on_tertiary_container;
+}
