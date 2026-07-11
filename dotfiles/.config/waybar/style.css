@@ -18,7 +18,7 @@ window#waybar {
 
 tooltip {
     background: @surface;
-    border: 1px solid @bg3;
+    border: 1px solid @outline;
     border-radius: 12px;
 }
 
@@ -28,12 +28,12 @@ tooltip label {
 }
 
 #workspaces {
-    background-color: @primary_container;
+    background-color: @background;
     padding: 5px 3px;
     margin: 0 0 0 12px;
     border-radius: 18px;
     border: 1px solid @outline_variant;
-    color: @on_primary_container;
+    color: @on_background;
 }
 
 #workspaces button {
@@ -54,8 +54,8 @@ tooltip label {
 }
 
 #workspaces button:hover {
-    background-color: @tertiary_container;
-    color: @on_tertiary_container;
+    background-color: @secondary_container;
+    color: @on_secondary_container;
     border-radius: 16px;
     min-width: 45px;
     background-size: 400% 400%;
@@ -75,12 +75,12 @@ tooltip label {
 #clock,
 #network,
 #custom-notification {
-    background-color: @primary_container;
-    color: @on_primary_container;
+    background-color: @background;
+    color: @on_background;
     padding: 0 15px 0 15px;
     margin: 0 15px 0 0;
     border-radius: 45px;
-    border: 1px solid @bg1;
+    border: 1px solid @outline_variant;
 }
 
 #clock {
@@ -120,6 +120,6 @@ tooltip label {
 
 /* Hover Effects */
 #battery:hover, #pulseaudio:hover, #network:hover, #clock:hover, #custom-notification:hover {
-    background-color: @tertiary_container;
-    color: @on_tertiary_container;
+    background-color: @secondary_container;
+    color: @on_secondary_container;
 }
