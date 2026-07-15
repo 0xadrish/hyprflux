@@ -19,7 +19,7 @@ window#waybar {
 tooltip {
     background: @surface;
     border: 1px solid @outline;
-    border-radius: 12px;
+    border-radius: 16px;
 }
 
 tooltip label {
@@ -31,7 +31,7 @@ tooltip label {
     background-color: @background;
     padding: 5px 3px;
     margin: 0 0 0 12px;
-    border-radius: 18px;
+    border-radius: 16px;
     border: 1px solid @outline_variant;
     color: @on_background;
 }
@@ -39,7 +39,7 @@ tooltip label {
 #workspaces button {
     padding: 0px 6px;
     margin: 0 3px;
-    border-radius: 50px;
+    border-radius: 16px;
     color: transparent;
     background-color: @secondary_container;
     transition: all 0.3s ease-in-out;
@@ -50,7 +50,7 @@ tooltip label {
     color: @on_primary;
     min-width: 45px;
     transition: all 0.3s ease-in-out;
-    font-size: 12px;
+    font-size: 14px;
 }
 
 #workspaces button:hover {
@@ -79,7 +79,7 @@ tooltip label {
     color: @on_background;
     padding: 0 15px 0 15px;
     margin: 0 15px 0 0;
-    border-radius: 45px;
+    border-radius: 16px;
     border: 1px solid @outline_variant;
 }
 
