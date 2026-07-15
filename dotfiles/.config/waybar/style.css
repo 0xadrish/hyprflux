@@ -92,18 +92,6 @@ tooltip label {
 
 }
 
-/* #pulseaudio {
-    color: @yellow;
-}
-
-#network {
-    color: @purple;
-}
-
-#battery {
-    color: @green;
-} */
-
 /* Module Specific States */
 #battery.critical:not(.charging) {
     background-color: @error;
@@ -111,7 +99,7 @@ tooltip label {
 }
 
 #pulseaudio.muted {
-    color: @on_surface_variant;
+    color: @error;
 }
 
 #network.disconnected {
