@@ -20,6 +20,7 @@ hl.bind(vars.mainMod .. " + B", hl.dsp.exec_cmd(vars.browser))
 hl.bind(vars.mainMod .. " + SHIFT + B", hl.dsp.exec_cmd(vars.browserIncognito))
 hl.bind(vars.mainMod .. " + X", hl.dsp.exec_cmd(vars.codeEditor))
 hl.bind("PRINT", hl.dsp.exec_cmd("grim ~/Pictures/Screenshot_$(date +'%Y-%m-%d_%H-%M-%S').png"))
+hl.bind(vars.mainMod .. " + O", hl.dsp.exec_cmd("obsidian"))
 
 -- Move focus with mainMod + arrow keys
 hl.bind(vars.mainMod .. " + left",  hl.dsp.focus({ direction = "left" }))
