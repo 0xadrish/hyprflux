@@ -5,5 +5,5 @@ return {
     browser     = "brave",
     browserIncognito = "brave --incognito",
     fileManager = "thunar",
-    codeEditor  = "codium",
+    codeEditor  = "code",
 }
