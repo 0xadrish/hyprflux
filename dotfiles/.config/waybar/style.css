@@ -74,6 +74,7 @@ tooltip label {
 #pulseaudio,
 #clock,
 #network,
+#custom-media,
 #custom-notification {
     background-color: @background;
     color: @on_background;
@@ -81,6 +82,10 @@ tooltip label {
     margin: 0 15px 0 0;
     border-radius: 16px;
     border: 1px solid @outline_variant;
+}
+
+#custom-media {
+    margin: 0 0 0 15px;
 }
 
 #clock {

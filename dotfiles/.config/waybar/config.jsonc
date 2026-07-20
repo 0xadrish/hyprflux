@@ -2,7 +2,8 @@
     "position": "top",
     "margin-top": 15,
     "modules-left": [
-        "clock"
+        "clock",
+        "custom/media"
     ],
     "modules-center": [
         "tray",
@@ -148,5 +149,16 @@
         "on-click": "swaync-client -t -sw",
         "on-click-right": "swaync-client -d -sw",
         "escape": true
+    },
+    "custom/media": {
+        "format": "{icon}{text}",
+        "return-type": "json",
+        "format-icons": {
+            "Paused": "  ",
+            "Playing": "  "
+        },
+        "max-length": 50,
+        "exec": "playerctl -a metadata --format '{\"text\": \"{{playerName}}: {{artist}} ~ {{markup_escape(title)}}\", \"tooltip\": \"{{playerName}} : {{markup_escape(title)}}\", \"alt\": \"{{status}}\", \"class\": \"{{status}}\"}' -F",
+        "on-click": "playerctl play-pause"
     }
 }
