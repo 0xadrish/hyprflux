@@ -103,16 +103,18 @@ tooltip label {
     color: @on_error;
 }
 
-#pulseaudio.muted {
-    color: @error;
-}
-
-#network.disconnected {
+#pulseaudio.muted,
+#network.disconnected,
+#network.linked {
     color: @error;
 }
 
 /* Hover Effects */
-#battery:hover, #pulseaudio:hover, #network:hover, #clock:hover, #custom-notification:hover {
+#battery:hover,
+#pulseaudio:hover,
+#network:hover,
+#clock:hover,
+#custom-notification:hover {
     background-color: @secondary_container;
     color: @on_secondary_container;
 }

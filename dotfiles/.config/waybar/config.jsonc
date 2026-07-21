@@ -64,25 +64,32 @@
         "on-click": "pavucontrol"
     },
     "network": {
-        "interface": "wlan0",
+        "interface": [
+            "en*",
+            "wl*",
+            "eth*"
+        ],
         "interval": 5,
+        "format-ethernet": "{icon}  Ethernet",
         "format-wifi": "{icon}  {essid}",
-        "format-ethernet": "   Ethernet",
         "format-icons": {
+            "ethernet": "",
             "wifi": [
                 "󰤯",
                 "󰤟",
                 "󰤢",
                 "󰤥",
                 "󰤨"
-            ]
+            ],
+            "disconnected": "󰪎"
         },
-        "format-disconnected": "󰪎  No Internet",
-        "tooltip-format-wifi": "{essid}\nSignal: {signalStrength}%\nIP: {ipaddr}",
-        "tooltip-format-ethernet": "Ethernet\nIP: {ipaddr}",
-        "tooltip-format-disconnected": "No network connection",
+        "format-disconnected": "{icon}  Offline",
+        "tooltip-format-disconnected": "{icon}  No network connection",
+        "tooltip-format-ethernet": "  Wired Network\n\nIP Address : {ipaddr}\nInterface     : {ifname}",
+        "tooltip-format-wifi": "{icon} {essid}\n\nSignal           : {signalStrength}%\nIP Address : {ipaddr}\nInterface     : {ifname}",
         "max-length": 20,
-        "on-click": "nm-connection-editor"
+        "on-click": "nm-connection-editor",
+        "on-click-right": "nmcli device wifi rescan"
     },
     "battery": {
         "interval": 60,
