@@ -151,14 +151,22 @@
         "escape": true
     },
     "custom/media": {
-        "format": "{icon}{text}",
+        "format": "{icon} {text}",
         "return-type": "json",
+        "exec": "~/.config/waybar/scripts/mediaplayer.py",
+        "interval": 1,
         "format-icons": {
-            "Paused": "  ",
-            "Playing": "  "
+            "Playing": "󰎈  ",
+            "Paused": "󰏤  ",
+            "Stopped": ""
         },
         "max-length": 50,
-        "exec": "playerctl -a metadata --format '{\"text\": \"{{playerName}}: {{artist}} ~ {{markup_escape(title)}}\", \"tooltip\": \"{{playerName}} : {{markup_escape(title)}}\", \"alt\": \"{{status}}\", \"class\": \"{{status}}\"}' -F",
-        "on-click": "playerctl play-pause"
+        "tooltip": true,
+        "on-click": "playerctl play-pause",
+        "on-click-right": "playerctl next",
+        "on-click-middle": "playerctl previous",
+        "on-scroll-up": "playerctl next",
+        "on-scroll-down": "playerctl previous",
+        "signal": 8
     }
 }
