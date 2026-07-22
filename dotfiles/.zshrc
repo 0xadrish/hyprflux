@@ -98,18 +98,50 @@ source $ZSH/oh-my-zsh.sh
 # Compilation flags
 # export ARCHFLAGS="-arch $(uname -m)"
 
-# Set personal aliases, overriding those provided by Oh My Zsh libs,
-# plugins, and themes. Aliases can be placed here, though Oh My Zsh
-# users are encouraged to define aliases within a top-level file in
-# the $ZSH_CUSTOM folder, with .zsh extension. Examples:
-# - $ZSH_CUSTOM/aliases.zsh
-# - $ZSH_CUSTOM/macos.zsh
-# For a full list of active aliases, run `alias`.
-#
-# Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
-alias ls="exa -l"
-alias la="exa -l -a"
+
+#########################
+#        ALIASES        #
+#########################
+
+# General
+alias ..="cd .."
+alias ...="cd ../.."
+alias ....="cd ../../.."
+alias c="clear"
+alias h="history"
+alias q="exit"
+
+# File/Folder Listin Aliases
+alias ls="eza -l"
+alias la="eza -la"
+alias lt="eza --tree"
+alias lta="eza --tree -a"
+
+# Package Manager (pacman & yay) Aliases
+alias p="sudo pacman -S"
+alias pS="pacman -Ss"
+alias pu="sudo pacman -Syu"
+alias pr="sudo pacman -Rns"
+alias pc="sudo pacman -Sc"
+alias pcc="sudo pacman -Scc"
+alias y="yay -S"
+alias yS="yay -Ss"
+alias yu="yay -Syu"
+alias yr="yay -Rns"
+
+# Git Aliases
+alias g="git"
+alias gs="git status"
+alias ga="git add"
+alias gaa="git add ."
+alias gc="git commit -m"
+alias gce="git commit"
+alias gp="git push"
+alias gl="git pull"
+alias gd="git diff"
+alias glg="git log --oneline --graph --decorate --all"
+
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+. "$HOME/.local/bin/env"
